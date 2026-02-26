@@ -1,4 +1,5 @@
-﻿using CW10B.Service;
+﻿using CW10B.Model;
+using CW10B.Service;
 
 namespace CW10B.Menu;
 
@@ -10,7 +11,7 @@ public class MainMenu(ProductService productService)
 
     public void AddProduct()
     {
-         
+
         if (string.IsNullOrWhiteSpace(_errorMessage))
             Console.WriteLine(_errorMessage);
 
@@ -23,7 +24,8 @@ public class MainMenu(ProductService productService)
                 var name = Console.ReadLine();
                 Console.WriteLine("Quantity:");
                 var Quantity = int.Parse(Console.ReadLine());
-                _productService.AddProduct(name, Quantity);
+                var min = int.Parse(Console.ReadLine());
+                _productService.AddProduct(name, Quantity, min);
                 _errorMessage = "";
                 break;
             }
@@ -36,7 +38,7 @@ public class MainMenu(ProductService productService)
 
     public void ReceiveGoods()
     {
-         
+
         if (string.IsNullOrWhiteSpace(_errorMessage))
             Console.WriteLine(_errorMessage);
 
@@ -62,8 +64,8 @@ public class MainMenu(ProductService productService)
 
     public void DispatchGoods()
     {
-        
-         
+
+
         if (string.IsNullOrWhiteSpace(_errorMessage))
             Console.WriteLine(_errorMessage);
 
@@ -91,17 +93,39 @@ public class MainMenu(ProductService productService)
     {
         _productService.PrintStockReport();
     }
+    public void DeleteProduct()
+    {
+        if (string.IsNullOrWhiteSpace(_errorMessage))
+            Console.WriteLine(_errorMessage);
 
+        while (true)
+        {
+            try
+            {
+                Console.WriteLine("Deleting product");
+                Console.WriteLine("name:");
+                var name = Console.ReadLine();
+                _productService.DeleteProduct(name);
+                _errorMessage = "";
+                break;
+            }
+            catch (Exception e)
+            {
+                _errorMessage = e.Message;
+            }
+        }
+    }
 
     public void Menu()
     {
-        
-        
+
+
         Console.WriteLine(@"1:Add product
 2:receive goods
 3:Dispatch goods
 4:Display
-5:Exit
+5:Delete
+6:Exit
 ");
 
         var command = Console.ReadKey().Key;
@@ -122,15 +146,18 @@ public class MainMenu(ProductService productService)
                 PrintStockReport();
                 break;
             case ConsoleKey.D5:
+                DeleteProduct();
+                break;
+            case ConsoleKey.D6:
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
-                
+
         }
-        
-        
-        
-        
-        
+
+
+
+
+
     }
 }
