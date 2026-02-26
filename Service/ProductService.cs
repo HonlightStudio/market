@@ -28,6 +28,11 @@ public class ProductService(ILogger logger, IProductRepository productRepository
         
     }
 
+    public void DeleteProduct(string name)
+    {
+        _productRepository.DeleteByName(name);
+    }
+
     public void DispatchGoods(string name, int quantity)
     {
         try
