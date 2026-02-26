@@ -1,0 +1,14 @@
+A:\programing\Maktab\cw\CW10B\obj\Debug\net9.0\CW10B.GeneratedMSBuildEditorConfig.editorconfig
+A:\programing\Maktab\cw\CW10B\obj\Debug\net9.0\CW10B.AssemblyInfoInputs.cache
+A:\programing\Maktab\cw\CW10B\obj\Debug\net9.0\CW10B.AssemblyInfo.cs
+A:\programing\Maktab\cw\CW10B\obj\Debug\net9.0\CW10B.csproj.CoreCompileInputs.cache
+A:\programing\Maktab\cw\CW10B\bin\Debug\net9.0\CW10B.exe
+A:\programing\Maktab\cw\CW10B\bin\Debug\net9.0\CW10B.deps.json
+A:\programing\Maktab\cw\CW10B\bin\Debug\net9.0\CW10B.runtimeconfig.json
+A:\programing\Maktab\cw\CW10B\bin\Debug\net9.0\CW10B.dll
+A:\programing\Maktab\cw\CW10B\bin\Debug\net9.0\CW10B.pdb
+A:\programing\Maktab\cw\CW10B\obj\Debug\net9.0\CW10B.dll
+A:\programing\Maktab\cw\CW10B\obj\Debug\net9.0\refint\CW10B.dll
+A:\programing\Maktab\cw\CW10B\obj\Debug\net9.0\CW10B.pdb
+A:\programing\Maktab\cw\CW10B\obj\Debug\net9.0\CW10B.genruntimeconfig.cache
+A:\programing\Maktab\cw\CW10B\obj\Debug\net9.0\ref\CW10B.dll
