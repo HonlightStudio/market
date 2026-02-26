@@ -1,4 +1,5 @@
 ﻿using CW10B.Logger;
+using CW10B.Model;
 using CW10B.Repository;
 
 namespace CW10B.Service;
@@ -9,9 +10,9 @@ public class ProductService(ILogger logger, IProductRepository productRepository
     IProductRepository _productRepository = productRepository;
 
 
-    public void AddProduct( string name, int quantity)
+    public void AddProduct( string name, int quantity,int min)
     {
-        _productRepository.Create(name, quantity);
+        _productRepository.Create(name, quantity,min);
     }
 
     public void ReceiveGoods(string name,int quantity)
@@ -27,6 +28,21 @@ public class ProductService(ILogger logger, IProductRepository productRepository
         }
         
     }
+
+
+    public IReadOnlyList<Product> GetLowCountProducts()
+    {
+        var list = new List<Product>();
+        foreach (var product in _productRepository.GetAll())
+        {
+            if (product.Quantity < product.Min)
+                list.Add(product);
+            
+        }
+        return list;
+        
+    }
+    
 
     public void DeleteProduct(string name)
     {

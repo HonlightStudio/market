@@ -13,11 +13,11 @@ public class ProductRepository : IProductRepository
         Load();
     }
 
-    public void Create(string name, int quantity)
+    public void Create(string name, int quantity,int min)
     {
         if (!ContainsName(name))
         {
-            _products.Add(new Product(name, quantity));
+            _products.Add(new Product(name, quantity,min));
             Save();
         }
         
