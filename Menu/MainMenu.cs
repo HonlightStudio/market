@@ -125,7 +125,8 @@ public class MainMenu(ProductService productService)
 3:Dispatch goods
 4:Display
 5:Delete
-6:Exit
+6:GetLowQuantity
+7:Exit
 ");
 
         var command = Console.ReadKey().Key;
@@ -149,6 +150,10 @@ public class MainMenu(ProductService productService)
                 DeleteProduct();
                 break;
             case ConsoleKey.D6:
+                foreach (var product in _productService.GetLowCountProducts())
+                    Console.WriteLine(product);
+                break;
+            case ConsoleKey.D7:
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
