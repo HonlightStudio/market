@@ -4,12 +4,9 @@ public class StudentInfo
 {
     public void PrintMyName()
     {
-        Console.WriteLine("My name is Hossein");
+        Console.WriteLine("My name is AmirMohammad");
         
     }
 
-    public void printToday()
-    {
-        Console.WriteLine("Today is " + DateTime.Now.ToShortDateString());
-    }
+    
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CW10B")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+42d4d96f2f51026c785196d1f34e7e4d79b0830b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cce980541bb5d044b3a6c1d6f10575a1358b116a")]
 [assembly: System.Reflection.AssemblyProductAttribute("CW10B")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CW10B")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
