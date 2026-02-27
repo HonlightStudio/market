@@ -1,7 +1,7 @@
 ﻿using CW10B.Logger;
 using CW10B.Model;
 using CW10B.Repository;
-
+using CW10B.Extensions;
 namespace CW10B.Service;
 
 public class ProductService(ILogger logger, IProductRepository productRepository)
@@ -29,6 +29,10 @@ public class ProductService(ILogger logger, IProductRepository productRepository
         
     }
 
+    public void BackUp()
+    {
+        _productRepository.CreateBackUp();
+    }
 
     public IReadOnlyList<Product> GetLowCountProducts()
     {
