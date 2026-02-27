@@ -157,7 +157,7 @@ public class MainMenu(ProductService productService)
             case ConsoleKey.D7:
                 var student = new StudentInfo();
                 student.PrintMyName();
-                student.printToday();
+                student.PrintTodayDate();
                 _productService.PrintStockReport();
                 break;
             case ConsoleKey.D8:
