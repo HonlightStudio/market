@@ -13,6 +13,9 @@ namespace CW10B.Model
             Console.WriteLine("My Name Is Mohamad");
         }
 
-
+        public void PrintTodayDate()
+        {
+            Console.WriteLine(DateTime.Now.ToString());
+        }
     }
 }
