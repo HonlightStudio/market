@@ -126,7 +126,8 @@ public class MainMenu(ProductService productService)
 4:Display
 5:Delete
 6:GetLowQuantity
-7:Exit
+7:About
+8:Exit
 ");
 
         var command = Console.ReadKey().Key;
@@ -154,6 +155,12 @@ public class MainMenu(ProductService productService)
                     Console.WriteLine(product);
                 break;
             case ConsoleKey.D7:
+                var student = new StudentInfo();
+                student.PrintMyName();
+                student.printToday();
+                _productService.PrintStockReport();
+                break;
+            case ConsoleKey.D8:
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
