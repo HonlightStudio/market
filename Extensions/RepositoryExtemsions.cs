@@ -6,10 +6,10 @@ namespace CW10B.Extensions;
 
 public static class RepositoryExtemsions
 {
-    public static void CreateBackUp(this ProductRepository repository)
+    public static void CreateBackUp(this IProductRepository repository)
     {
         PersianCalendar calendar = new PersianCalendar();
-        string fileName = calendar.GetYear(DateTime.Now) + calendar.GetMonth(DateTime.Now).ToString() + calendar.GetDayOfMonth(DateTime.Now);
+        string fileName = calendar.GetYear(DateTime.Now) + calendar.GetMonth(DateTime.Now).ToString() + calendar.GetDayOfMonth(DateTime.Now) + ".json";
         var data = repository.GetAll();
         string json = JsonSerializer.Serialize(data);
         File.WriteAllText(fileName, json);
