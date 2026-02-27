@@ -7,6 +7,9 @@ public class StudentInfo
         Console.WriteLine("My name is AmirMohammad");
         
     }
-
+    public void PrintTodayDate()
+    {
+        Console.WriteLine(DateTime.Now.ToString());
+    }
     
 }
